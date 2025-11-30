@@ -1,6 +1,6 @@
 from random import *
 
-solution = open("solution.txt", "w", encoding="utf-8")
+# solution = open("solution.txt", "w", encoding="utf-8")
 
 zero_field = [
     [0,0,0,0,0,0,0,0,0],
@@ -11,7 +11,7 @@ zero_field = [
     [0,0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0]
 ]
 
 
@@ -191,8 +191,8 @@ def generate():
                         num_list.remove(num)
 
 generate()
-print(zero_field)
+# print(zero_field)
 
-for line in zero_field:
-    solution.write(str(line) + "\n")
-solution.close()
+# for line in zero_field:
+#     solution.write(str(line) + "\n")
+# solution.close()

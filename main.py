@@ -1,16 +1,20 @@
-# This is a sample Python script.
+import copy
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import field_generator
+import Sudoku_ToMakeHoles_and_Check
+import game
 
+field_generator.generate()
+game_board = Sudoku_ToMakeHoles_and_Check.remove_numbers(field_generator.zero_field)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+game_solution = copy.deepcopy(game_board)
 
+Sudoku_ToMakeHoles_and_Check.solve_and_count(game_solution)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# for row in game_board:
+#     print(row)
+#
+# for row in game_solution:
+#     print(row)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+game.play_game(game_board, game_solution)
