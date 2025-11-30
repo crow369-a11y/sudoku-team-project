@@ -1,6 +1,25 @@
-# game.py
-from utils import print_board, is_complete
+def print_board(board):
+    """Красиво выводит доску Судоку"""
+    print("\n" + "—" * 25)
+    for i, row in enumerate(board):
+        if i == 3 or i == 6:
+            print("—" * 25)
+        line = "| "
+        for j, cell in enumerate(row):
+            if j == 3 or j == 6:
+                line += "| "
+            line += str(cell) if cell != 0 else "."
+            line += " "
+        line += "|"
+        print(line)
+    print("—" * 25)
 
+def is_complete(board):
+    """Проверяет, заполнена ли доска полностью (и корректно — не требуется здесь)"""
+    for row in board:
+        if 0 in row:
+            return False
+    return True
 
 def play_game(puzzle, solution):
     # Маска исходных чисел
