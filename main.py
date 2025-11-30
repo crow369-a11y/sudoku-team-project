@@ -1,3 +1,7 @@
+import sys
+
+sys.setrecursionlimit(3000)
+
 import copy
 
 import field_generator
