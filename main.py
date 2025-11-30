@@ -21,4 +21,4 @@ Sudoku_ToMakeHoles_and_Check.solve_and_count(game_solution)
 # for row in game_solution:
 #     print(row)
 
-game.play_game(game_board, game_solution)
+game.game_face(game_board, game_solution,3)
