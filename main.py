@@ -1,6 +1,6 @@
 import sys
 
-sys.setrecursionlimit(3000)
+sys.setrecursionlimit(3000) # Увеличение лимита рекурсии необходимо для корректной работы рекурсивного решателя судоку на сложных полях.
 
 import copy
 
